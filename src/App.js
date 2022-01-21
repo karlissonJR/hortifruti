@@ -2,6 +2,8 @@ import './App.css';
 
 import { useState, useEffect } from 'react'
 
+import Card from './components/Card'
+
 import fruityviceApi from './api/fruityvice'
 
 function App() {
@@ -15,19 +17,16 @@ function App() {
   }, [])
   
   return (
-    <div>
-      <header>
-        <ul>
-          {fruits.map(fruit => {
-            return (
-              <li key={fruit.id}>
-                {fruit.name}
-              </li>
-            )
-          })}
-        </ul>
-        
-      </header>
+    <div className="container">
+      {fruits.map(fruit => {
+        return (
+            <Card
+              key={fruit.id}
+              title={fruit.name}
+              body={fruit}
+            />
+        )
+      })}
     </div>
   );
 }
