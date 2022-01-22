@@ -26,7 +26,7 @@ function ProductList() {
               <Card
                 key={fruit.id}
                 title={fruit.name}
-                body={fruit}
+                fruit={fruit}
               />
           )
         })}
