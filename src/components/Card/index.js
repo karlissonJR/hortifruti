@@ -10,7 +10,17 @@ function Card(props) {
 
         const cart = JSON.parse(localStorage.getItem('cart'))
 
-        cart.push(props.fruit)
+        const isOnCart = cart.find(fruit => {
+            return fruit.id === props.fruit.id
+        })
+
+        if (isOnCart) {
+            cart[cart.indexOf(isOnCart)].quantity++
+        } else {
+            props.fruit.quantity = 1
+            cart.push(props.fruit)
+        }
+        
         localStorage.setItem('cart', JSON.stringify(cart))
 
         // alert(props.fruit.name + ' adicionado ao carrinho')

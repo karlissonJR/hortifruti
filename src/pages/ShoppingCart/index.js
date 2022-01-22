@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 
 import Header from '../../components/Header'
 
@@ -35,10 +35,11 @@ function ShoppingCart() {
         <ul>
           {cart.map(fruit => {
             return (
-              <>
-                <li key={fruit.id}>{fruit.name}</li>
+              <Fragment key={fruit.id}>
+                <li>{fruit.name}</li>
                 <button onClick={() => removeFromCart(fruit.id)} type="button">Deletar</button>
-              </>
+                <p>Quantidade {fruit.quantity}</p>
+              </Fragment>
             )
           })}
         </ul>
