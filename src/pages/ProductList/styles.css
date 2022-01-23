@@ -3,4 +3,9 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     margin: 10rem 5rem;
-  }
+}
+
+.alert {
+  position: fixed;
+  bottom: 0;
+}

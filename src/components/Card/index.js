@@ -1,6 +1,11 @@
 import './styles.css'
 
-function Card(props) {
+import { Button } from '@material-ui/core'
+import { Card, CardContent, CardActionArea, CardActions, Typography, CardHeader } from '@mui/material'
+import { Close } from '@mui/icons-material'
+
+
+function FruitCard(props) {
 
     const sendToCart = () => {
 
@@ -23,33 +28,38 @@ function Card(props) {
         
         localStorage.setItem('cart', JSON.stringify(cart))
 
-        // alert(props.fruit.name + ' adicionado ao carrinho')
+        props.onClick()
     }
 
     return (
-        <div className="card">
+        <Card sx={{ maxWidth: 300 }}>
+            
             <header>
-                <h3>{props.title}</h3>
+                <CardHeader title={props.title}/>
             </header>
-            <main>
-                <ul>
-                    <li>Gênero: {props.fruit.genus}</li>
-                    <li>Família: {props.fruit.family}</li>
-                    <li>Ordem: {props.fruit.order}</li>
-                    <li>Carboidratos: {props.fruit.nutritions.carbohydrates}g</li>
-                    <li>Proteína: {props.fruit.nutritions.protein}g</li>
-                    <li>Gordura: {props.fruit.nutritions.fat}g</li>
-                    <li>Calorias: {props.fruit.nutritions.calories}g</li>
-                    <li>Açúcar: {props.fruit.nutritions.sugar}g</li>
-                </ul>
-            </main>
 
+            <CardContent>
+        
+                <Typography variant="body2" color="text.primary">
+                    <ul>
+                        <li>Gênero: {props.fruit.genus}</li>
+                        <li>Família: {props.fruit.family}</li>
+                        <li>Ordem: {props.fruit.order}</li>
+                        <li>Carboidratos: {props.fruit.nutritions.carbohydrates}g</li>
+                        <li>Proteína: {props.fruit.nutritions.protein}g</li>
+                        <li>Gordura: {props.fruit.nutritions.fat}g</li>
+                        <li>Calorias: {props.fruit.nutritions.calories}g</li>
+                        <li>Açúcar: {props.fruit.nutritions.sugar}g</li>
+                    </ul>
+                </Typography>
+            </CardContent>
+        
             <footer>
-                <button onClick={sendToCart} type="button">Adicionar ao carrinho</button>
+                <Button onClick={sendToCart} variant="contained" color="secondary">Adicionar ao carrinho</Button>
             </footer>
-        </div>
+        </Card>
     )
 
 }
 
-export default Card;
+export default FruitCard;
