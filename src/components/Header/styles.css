@@ -2,11 +2,12 @@
     top: 0;
     background-color: #D35400;
     position: fixed;
-    height: 10%;
-    max-height: 100px;
+    height: 5rem;
+    max-height: 4rem;
     max-width: 100%;
     width: 100%;
     display: flex;
+    z-index: 1;
 }
 
 .link {

@@ -1,9 +1,7 @@
 import './styles.css'
 
 import { Button } from '@material-ui/core'
-import { Card, CardContent, CardActionArea, CardActions, Typography, CardHeader } from '@mui/material'
-import { Close } from '@mui/icons-material'
-
+import { Card, CardContent, Typography, CardHeader } from '@mui/material'
 
 function FruitCard(props) {
 
