@@ -4,8 +4,3 @@
     grid-gap: 10px;
     margin: 10rem 5rem;
 }
-
-.alert {
-  position: fixed;
-  bottom: 0;
-}

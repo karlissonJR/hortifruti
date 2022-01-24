@@ -18,8 +18,6 @@ import {
 
 import Header from '../../components/Header'
 
-import './styles.css'
-
 function Row({ fruit, cart, setCart }) {
   const [open, setOpen] = useState(false)
 
@@ -64,7 +62,7 @@ function Row({ fruit, cart, setCart }) {
         <TableCell>{fruit.genus}</TableCell>
         <TableCell>{fruit.family}</TableCell>
         <TableCell>{fruit.order}</TableCell>
-        <TableCell className="quantity-cell">
+        <TableCell>
           <Button
             style={{
               maxWidth: '30px',

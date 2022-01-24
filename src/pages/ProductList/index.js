@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { Box, Alert, IconButton, Collapse, CloseIcon, Snackbar } from '@mui/material'
+import { Alert, Snackbar } from '@mui/material'
 
 import Card from '../../components/Card'
 import Header from '../../components/Header'
