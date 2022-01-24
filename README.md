@@ -6,17 +6,17 @@ O sistema utiliza uma API pública do site <a href="https://www.fruityvice.com/d
 
 ## Versões
 
-node: 16.13.2
-npm: 8.1.2
-yarn 1.22.5
+node: 16.13.2<br/>
+npm: 8.1.2<br/>
+yarn 1.22.5<br/>
 
 ## Configuração com npm
-### `npm install` para instalar as dependências
-### `npm start` para rodar o projeto
+`npm install` para instalar as dependências<br/>
+`npm start` para rodar o projeto
 
 ## Configuração com yarn
-### `yarn` para instalar as dependências
-### `yarn start` para rodar o projeto
+`yarn` para instalar as dependências<br/>
+`yarn start` para rodar o projeto
 
 ## Erro de cors na API
 Caso esteja com problemas para carregar os dados da API.\
